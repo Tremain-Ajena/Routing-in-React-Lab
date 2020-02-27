@@ -5,7 +5,7 @@ import Page2 from './Page2';
 import People from './People';
 import Movies from './Movies';
 import Demographics from './Demographics';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends Component {
@@ -13,15 +13,18 @@ class App extends Component {
         return (
             <Router>
                 <Fragment>
-                    <button id='btn1'>
+                    <div className="d-flex justify-content-center my-5">
+                    <button className="btn btn-dark" id="btn1">
                     <Link to="/home">Go Home</Link>
                     </button>
-                    <button>
+                    <button className="btn btn-dark mx-3" id="btn2">
                     <Link to="/page2">View Films</Link>
                     </button>
-                    <button>
+                    <button className="btn btn-dark" id="btn3">
                     <Link to="/people">View People</Link>
                     </button>
+
+                    </div>
                     <Switch>
                         <Route exact path = "/home" component={Home} />
                         <Route exact path = "/page2" component={Page2} />

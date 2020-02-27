@@ -30,7 +30,8 @@ class Home extends Component {
         
         return (
             <div>
-                <h1>This is the first page</h1>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png" alt="Logo"></img>
+                {/* <h1>This is the first page</h1> */}
                 
             </div>
         );

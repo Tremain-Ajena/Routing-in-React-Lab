@@ -27,12 +27,16 @@ class Movies extends Component {
 
     render () {
         return (
-            
-            <div key={this.state.movie.id}>
-                <h1>{this.state.movie.title}, {this.state.movie.release_date}</h1>
-                <h5>Director:{this.state.movie.director} | Producer:{this.state.movie.producer}</h5>
-                <p>{this.state.movie.description}</p>
-            </div>
+           
+            <React.Fragment>
+                <div className="card">
+                    <h1 className="card-header">{this.state.movie.title}, {this.state.movie.release_date}</h1>
+                    <div className="card-body">
+                        <h5 className="card-title">Director:{this.state.movie.director} | Producer:{this.state.movie.producer}</h5>
+                        <p className="card-text">{this.state.movie.description}</p>
+                    </div>
+                </div>
+            </React.Fragment>
 
             
         )

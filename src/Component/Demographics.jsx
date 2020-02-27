@@ -28,10 +28,10 @@ class Demographics extends Component {
         return (
             
             <div key={this.state.facts.id}>
-                <h1>{this.state.facts.name}, {this.state.facts.age}</h1>
+                {/* <h1>{this.state.facts.name}, {this.state.facts.age}</h1> */}
                 {/* <h5>C:{this.state.facts.name} | Producer:{this.state.facts.producer}</h5> */}
         
-                    <div>
+                    {/* <div>
                     {this.state.facts.gender}
                     </div>
                     <div>
@@ -39,8 +39,22 @@ class Demographics extends Component {
                     </div>
                     <div>
                     {this.state.facts.hair_color}
-                    </div>
+                    </div> */}
             
+                <React.Fragment>
+                    <div className="card">
+                        <h1 className="card-header">{this.state.facts.name}</h1>
+                        <div className="card-body">
+                            <h5 className="card-title">{this.state.facts.gender} | Age: {this.state.facts.age}</h5>
+                            <p className="card-text ">
+                                Eye Color: {this.state.facts.eye_color}
+                            </p>
+                            <p className="card-text ">
+                                Hair Color: {this.state.facts.hair_color}
+                            </p>
+                        </div>
+                    </div>
+                </React.Fragment>
             </div>
 
             

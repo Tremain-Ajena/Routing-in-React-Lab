@@ -29,7 +29,7 @@ class People extends Component {
     render() {
         return (
             <div>
-                <h2>Characters</h2>
+                {/* <h2>Characters</h2>
                 <ul>
                     {this.state.cast.map(cast => (
                         <li key={cast.id}>
@@ -37,15 +37,30 @@ class People extends Component {
                             <div>
 
                                 <Link to={`/people/${cast.id}`}>
-                                    <button>More Info</button>
+                                    <button className="btn btn-secondary">More Info</button>
                                 </Link>
                             
                             </div>
                         </li>
                     ))}
+                </ul> */}
+                
+                <h2>Film Characters</h2>
+                {this.state.cast.map(cast => (
+                    <React.Fragment key={cast.id}>
+                        <div className="col-sm-6 my-2">
+                            <div className="card">
+                                <div className="card-body">
+                                    <h5 className="card-title">{cast.name}</h5>
+                                    <Link to={`/people/${cast.id}`}>
+                                        <button className="btn btn-secondary">More Info</button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </React.Fragment>
 
-
-                </ul>
+                ))}
                 
             </div>
         );
